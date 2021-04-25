@@ -7,6 +7,7 @@
 include('assets/include/connexionbdd.php');
 require_once('assets/include/header.php'); 
 
+
 $req = $bdd->prepare('SELECT * FROM article WHERE id = ?');
 $req->execute(array($_GET['article']));
  $donnees = $req->fetch();
@@ -15,6 +16,18 @@ $req->execute(array($_GET['article']));
          echo "Pas d'article";
         
      } else {
+        $sql = "SELECT COUNT(Nottation) FROM note  WHERE idArticle = :idArticle";
+        $count = $bdd->prepare($sql);
+        $count->bindParam(':idArticle',$donnees['id']);
+        $count->execute();
+        $total = $count->fetch();
+      
+        $sql = "SELECT AVG(Nottation) FROM note  WHERE idArticle = :idArticle";
+        $count = $bdd->prepare($sql);
+        $count->bindParam(':idArticle',$donnees['id']);
+        $count->execute();
+        $moyenne = $count->fetch();
+        $moyenne = round($moyenne[0]);
 ?>
 <!-- Fin du Header -->
 <section class="jumbotron text-center">
@@ -85,13 +98,14 @@ $req->execute(array($_GET['article']));
                         </ul>
                     </div>
                     <div class="reviews_product p-3 mb-2 ">
-                        3 avis
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        (4/5)
+                        
+                        <?php if(empty($total[0])) echo "0"; else echo $total[0]; ?> avis
+                        <a href="addAvis.php?rate=1&article=<?php echo $donnees['id']; ?>"> <img src=".\assets\images\starup.png" > </a>
+                        <a href="addAvis.php?rate=2&article=<?php echo $donnees['id']; ?>"> <img src=".\assets\images\<?php if($moyenne >= 2 ) echo "starup" ;else echo "stardown"; ?>.png" > </a>
+                        <a href="addAvis.php?rate=3&article=<?php echo $donnees['id']; ?>"> <img src=".\assets\images\<?php if($moyenne >= 3 ) echo "starup" ;else echo "stardown"; ?>.png" > </a>
+                        <a href="addAvis.php?rate=4&article=<?php echo $donnees['id']; ?>"> <img src=".\assets\images\<?php if($moyenne >= 4 ) echo "starup" ;else echo "stardown"; ?>.png" > </a>
+                        <a href="addAvis.php?rate=5&article=<?php echo $donnees['id']; ?>"> <img src=".\assets\images\<?php if($moyenne >= 5 ) echo "starup" ;else echo "stardown"; ?>.png" > </a>
+
                     </div>
                    
                 </div>
