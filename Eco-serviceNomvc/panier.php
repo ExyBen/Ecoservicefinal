@@ -67,7 +67,7 @@ $total = 0;
                 </div>
               </div>
             </div>
-            <div class="my-5 d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-link text-muted" href="category.html"><i class="fa fa-chevron-left"></i> Continue Shopping</a><a class="btn btn-dark" href="checkout1.html">Proceed to checkout <i class="fa fa-chevron-right"></i>                                                     </a></div>
+            <div class="my-5 d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-link text-muted" href="allProducts.php"><i class="fa fa-chevron-left"></i>Revenir à la boutique</a><a class="btn btn-success" href="finalpay.php">Proceder au paiement <i class="fa fa-chevron-right"></i>                                                     </a></div>
           </div>
           <div class="col-lg-4">
             <div class="block mb-5">
@@ -77,15 +77,15 @@ $total = 0;
               <div class="block-body bg-light pt-1">
               <a>Vous Avez <?php echo $count  ?> articles dans votre panier ! </a>
             <br/>
-            <?php echo "Total de la commande : " . $total . ' €' ?>
+            <?php echo "Prix total de la commande : " . $total . ' €' ?>
             
             <br/>
-            <a  href="finalpay.php" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a>
+            <!-- <a  href="finalpay.php" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+</section>
 <!-- Footer -->
 <?php require_once('assets/include/footer.php');?>
