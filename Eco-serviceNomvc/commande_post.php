@@ -10,7 +10,7 @@ if($_POST['prix'] == "0" OR $_POST['nb_articles'] == "0"){
     header('Location:accueil.php');
 }else{
 // Insertion du message à l'aide d'une requête préparée
-if(isset($_POST['livraisonmode1']) AND $_POST['livraisonmode1'] == "on"){
+if(isset($_POST['livraisonmode']) AND $_POST['livraisonmode'] == "4,99"){
     $_POST['prix'] = $_POST['prix'] +4.99;
 }
 $datimer=date ("Y-m-d H:i:s");

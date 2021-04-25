@@ -59,7 +59,7 @@ $req->execute(array($_GET['article']));
         <div class="col-12 col-lg-6">
             <div class="card bg-light mb-3">
                 <div class="card-body text-center">
-                        <img class="img-fluid" src="assets/images/articleImg/<?php echo $donnees['img']; ?>" />
+                        <img class="img-fluid" width="250" height="220" src="assets/images/articleImg/<?php echo $donnees['img']; ?>" />
                 </div>
             </div>
         </div>
@@ -69,7 +69,6 @@ $req->execute(array($_GET['article']));
             <div class="card bg-light mb-3">
                 <div class="card-body">
                     <p class="price"><?php echo $donnees['prix']; ?> €</p>
-                    <p class="price_discounted">149.90 €</p>
                     <form method="post" action="addPanier.php?link=product">
                         <input hidden name="id_article" value="<?php echo $donnees['id']; ?>">
                         <div class="form-group">
