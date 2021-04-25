@@ -26,7 +26,7 @@ require_once('assets/include/header.php');
             <h3 style="color:white;">Service Zero Déchets</h3>
             </br>
             <p style="color:white;">Besoin de recyclage au sein de votre entreprise ? Laissez nous faire! Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet. Prenez rendez-vous sans plus attendre !</p>
-            <button class="buttonDevis  center-block">Demande de devis</button>
+            <a href="entreprise.php" class="buttonDevis  center-block">Demande de devis</a>
         </div>
 
         <div class='col-5 no-padding ' >
