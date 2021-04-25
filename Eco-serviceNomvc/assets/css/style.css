@@ -54,6 +54,9 @@ html {
     border-radius: .25rem;
     margin-bottom: 10px;
 }
+.fa-check{
+   color: #668B22;
+}
 .buttonDevis{
     background-color: white; /* Green */
     border: none;
