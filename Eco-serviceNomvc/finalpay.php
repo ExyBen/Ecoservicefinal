@@ -45,7 +45,7 @@ $total = 0;
                             <div class="row d-flex align-items-center text-center">
                             <div class="col-5">
                                 <div class="d-flex align-items-center"><a href="detail.html"><img  width="200px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
-                                <div class="cart-title text-left"><a class="text-uppercase text-dark" href="detail.html"><strong><?php echo $article['titre_article'] ?></strong></a><br>
+                                <div class="cart-title text-left"><a class="text-uppercase text-dark" href="detail.html"><strong><?php echo $article['titre_article'] ?><?php echo $article['id'] ?></strong></a><br>
                                 </div>
                                 </div>
                             </div>
@@ -95,11 +95,11 @@ $total = 0;
                 <div class="col-lg-12 text-center" style="background-color:white;">
                 <div class="form-group col-md-12 d-flex align-items-center">
                  <div class="col-6 col-xs-12">
-                    <input type="radio" name="livraisonmode" id="option0">
+                    <input type="radio" name="livraisonmode" id="option0" checked>
                     <label class="ml-6" for="option0"><strong class="d-block text-uppercase mb-2">Livraison gratuite </strong><span class="text-muted text-sm">Recevez vos produits sous 7 jours  .</span></label>
                  </div>
                  <div class="col-6 col-xs-12">
-                    <input type="radio" name="livraisonmode" id="option1">
+                    <input type="radio" name="livraisonmode1" id="option1">
                     <label class="ml-6" for="option0"><strong class="d-block text-uppercase mb-2">Livraison rapide ! (+4,99€)</strong><span class="text-muted text-sm">Recevez vos produits sous 48H !</span></label>
                   </div>
                 </div>  
@@ -110,7 +110,9 @@ $total = 0;
     <input hidden name="prix" value="<?php echo $total ; ?>">
     <input hidden name="nb_articles" value="<?php echo $count ; ?>">
     <input hidden name="statut" value="1">
-    <input hidden name="idUser" value="<?php $_SESSION['id'] ; ?>">
+    <input hidden name="idArticle" value="<?php echo $article['id'] ; ?>">
+    <input hidden name="exemplaire" value="<?php echo $article['exemplaire'] ; ?>">
+
 <div class="text-center">
     <button type="submit"> <img  src="assets\images\paypal.png" ></button>
 </div>

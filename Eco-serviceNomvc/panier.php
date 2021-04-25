@@ -29,9 +29,9 @@ $total = 0;
       <div class="container">
         <div class="row mb-5"> 
           <div class="col-lg-8">
-            <div class="cart">
-              <div class="cart-wrapper">
-                <div class="cart-header text-center">
+            <div class="cart" >
+              <div class="cart-wrapper" >
+                <div class="cart-header text-center" style="border: 2px solid #668B22; border-radiux:10px;">
                   <div class="row ligne1" style="margin-bottom:10px;">
                     <div class="col-5">Produit</div>
                     <div class="col-2">Prix</div>
@@ -40,14 +40,14 @@ $total = 0;
                     <div class="col-1"></div>
                   </div>
                 </div>
-                <div class="cart-body">
+                <div class="cart-body" >
                   <!-- Product-->
                   <?php $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
 
-                  <div class="cart-item">
+                  <div class="cart-item" style="border: 1px solid #668B22; border-radiux:10px;">
                     <div class="row d-flex align-items-center text-center">
                       <div class="col-5">
-                        <div class="d-flex align-items-center"><a href="detail.html"><img  width="200px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
+                        <div class="d-flex align-items-center"><a href="detail.html"><img  width="150px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
                           <div class="cart-title text-left"><a class="text-uppercase text-dark" href="detail.html"><strong><?php echo $article['titre_article'] ?></strong></a><br>
                           </div>
                         </div>
