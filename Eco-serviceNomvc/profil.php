@@ -38,12 +38,17 @@ if(!isset($_POST['pass3'])){
     <section class="jumbotron  ">
         <div class="container">
             <h1 class="jumbotron-heading profil text-center" > Information </h1></br></br>
-            <p> <?php echo $_SESSION['email']?> </p>
-            <p> <?php echo $_SESSION['adresse']?> </p>
-            <?php if(isset($_SESSION['siret'])){ ?>
-                <p> <?php echo $_SESSION['siret']?> </p>
+            <p>Votre Nom : <?php echo $_SESSION['nom']?> </p>
+            <p>Votre Prenom : <?php echo $_SESSION['prenom']?> </p>
+            <p>Votre numéro de téléphone : <?php echo $_SESSION['telnum']?> </p>
+            <p>Votre mail : <?php echo $_SESSION['email']?> </p>
+            <p>Votre adresse : <?php echo $_SESSION['adresse']?> </p>
+            <p>Votre Code postal : <?php echo $_SESSION['zip']?> </p>
+            <p>Votre Pays : <?php echo $_SESSION['country']?> </p>
+            <p>Votre SIRET :<?php if(isset($_SESSION['siret'])){ ?>
+                <a> <?php echo $_SESSION['siret']?> </a>
             <?php }else{ ?>
-                <p>Vous n'avez pas de SIRET
+                <a>Vous n'avez pas de SIRET</a>
             <?php } ?>    
         </div>
     </section>
