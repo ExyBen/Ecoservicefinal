@@ -43,6 +43,8 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
                 <select id="categoriearticle" name="categoriearticle" class="form-control">
                     <option value="Shampoing">Shampoing</option>
                     <option value="Bouteilles">Bouteille</option>
+                    <option value="Boites">Boites</option>
+                    <option value="Cables">Cables</option>
                     <option value="Ordinateur">Ordinateur</option>
                 </select><br>          
                 <label>Image : </label>
