@@ -106,7 +106,7 @@ if(!isset($_POST['pass3'])){
                     }else{
                         echo "Livré";
                     } ?></td>
-                    <td><?php echo $donnees['prix'] ?></td>
+                    <td><?php echo $donnees['prix'] ?> €</td>
                 </tr>
                 <?php } } ?>
             </table> 

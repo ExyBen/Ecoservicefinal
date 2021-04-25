@@ -3,6 +3,10 @@
 session_start();
 
 include('assets/include/connexionbdd.php');
+
+if($_POST['prix'] == "0" OR $_POST['nb_articles'] == "0"){
+    header('Location:accueil.php');
+}else{
 // Insertion du message à l'aide d'une requête préparée
 if(isset($_POST['livraisonmode1']) AND $_POST['livraisonmode1'] == "on"){
     $_POST['prix'] = $_POST['prix'] +4.99;
@@ -32,5 +36,6 @@ header('location:https://www.paypal.com/paypalme/nathan93600.php');
     $Erreurpaiement = "Une erreur à été rencontré lors de votre paiement, veuillez réessayer !";
     // header('location:panier.php');
 
+}
 }
 ?>

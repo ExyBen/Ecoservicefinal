@@ -13,6 +13,7 @@ $panier->execute();
 $articles = $panier->fetchall();
 $total = 0;
 
+
 ?>
 <form action="commande_post.php" method="post">
     <section class="jumbotron">
@@ -39,7 +40,7 @@ $total = 0;
                         </div>
                         <div class="cart-body">
                         <!-- Product-->
-                        <?php $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
+                        <?php  $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
 
                         <div class="cart-item">
                             <div class="row d-flex align-items-center text-center">
@@ -120,3 +121,4 @@ $total = 0;
 
 
 <?php require_once('assets/include/footer.php');?>
+
