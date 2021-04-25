@@ -66,6 +66,9 @@ html {
 .buttonDevis{
     background-color: white; /* Green */
 }
+.imgslash{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 42% 100%);
+}
 .buttonDevis {
     background-color: white;
     /* Green */
@@ -175,6 +178,7 @@ h5 {
 
 .item-card {
     background-color: #668B22;
+    padding: 15px 30px;
 }
 
 .bg-color2 {
@@ -183,6 +187,7 @@ h5 {
 
 .item-card2 {
     background-color: #898949;
+    padding: 15px 30px;
 }
 
 #selectConnexion {
@@ -219,8 +224,12 @@ a:hover {
 input[type="search"],
 .backgroundsearch {
     float: left;
-}
+    
 
+}
+#buttonclick{
+    background-color: #668B22;
+}
 .btn2 {
     display: inline-block;
     font-weight: 400;
@@ -280,6 +289,7 @@ input[type="search"],
     @extend .extra-col;
     flex: 0 0 45.833333315%;
     max-width: 45.833333315%;
+    margin-left:10px;
 }
 
 .col-custom {

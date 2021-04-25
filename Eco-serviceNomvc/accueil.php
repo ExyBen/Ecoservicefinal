@@ -27,8 +27,7 @@ require_once('assets/include/banniere.svg');
                 </br></br>
                 <p>Eco-service est la société qui vous propose la vente de produits zero-dechet et la réservation de services de recyclege en entreprise depuis 20 ans</p>
             </div>
-            <div class="col-lg-1">
-            </div>
+            
 
             <div class="col-5-5 col-sm-4 card item-card2">
                 </br>
@@ -118,8 +117,9 @@ Prenez rendez-vous dès maintenant pour bénéfier de notre sercive de recyclage
             </div>
             <div class="col-7">
              <p>Besoin de recyclage au sein de votre entreprise ? Laissez nous faire!
-Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet.
-Prenez rendez-vous sans plus attendre!</p>
+                Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet.
+                Prenez rendez-vous sans plus attendre!
+            </p>
             <button class="btn btn-success" onclick="window.location.href='services.php'">Voir nos services</button>
             </div>
             
