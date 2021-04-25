@@ -38,12 +38,17 @@ if(!isset($_POST['pass3'])){
     <section class="jumbotron  ">
         <div class="container">
             <h1 class="jumbotron-heading profil text-center" > Information </h1></br></br>
-            <p> <?php echo $_SESSION['email']?> </p>
-            <p> <?php echo $_SESSION['adresse']?> </p>
-            <?php if(isset($_SESSION['siret'])){ ?>
-                <p> <?php echo $_SESSION['siret']?> </p>
+            <p>Votre Nom : <?php echo $_SESSION['nom']?> </p>
+            <p>Votre Prenom : <?php echo $_SESSION['prenom']?> </p>
+            <p>Votre numéro de téléphone : <?php echo $_SESSION['telnum']?> </p>
+            <p>Votre mail : <?php echo $_SESSION['email']?> </p>
+            <p>Votre adresse : <?php echo $_SESSION['adresse']?> </p>
+            <p>Votre Code postal : <?php echo $_SESSION['zip']?> </p>
+            <p>Votre Pays : <?php echo $_SESSION['country']?> </p>
+            <p>Votre SIRET :<?php if(isset($_SESSION['siret'])){ ?>
+                <a> <?php echo $_SESSION['siret']?> </a>
             <?php }else{ ?>
-                <p>Vous n'avez pas de SIRET
+                <a>Vous n'avez pas de SIRET</a>
             <?php } ?>    
         </div>
     </section>
@@ -79,20 +84,31 @@ if(!isset($_POST['pass3'])){
                     <th>N° Commande</th>
                     <th>Nb Article</th>
                     <th>Date</th>
+                    <th>Statut</th>
                     <th>Total</th>
                 </tr>
-                <tr class="gris">
-                    <td>15456</td>
-                    <td>2</td>
-                    <td>21/03/2021</td>
-                    <td>23 €</td>
-                </tr>
+                <?php $req = $bdd->prepare('SELECT * FROM commande WHERE idUser = ?');
+                        $req->execute(array($_SESSION['id']));
+                        $donnees = $req->fetch();
+                            // si il n'ya pas de donnee on echo pas d'article au sinon on affiche la page JUSQUA
+                            if(!$donnees){
+                                echo "Vous n'avez pas encore fait de commandes !";
+        
+                        } else {
+                            while ($donnees = $req->fetch()){
+                        ?>
                 <tr>
-                    <td>159749156</td>
-                    <td>26</td>
-                    <td>17/03/2021</td>
-                    <td>196 €</td>
+                    <td><?php echo $donnees['id'] ?></td>
+                    <td><?php echo $donnees['nb_articles'] ?></td>
+                    <td><?php echo $donnees['date_commande'] ?></td>
+                    <td><?php  if($donnees['statut']== '1'){
+                        echo "En cours"; 
+                    }else{
+                        echo "Livré";
+                    } ?></td>
+                    <td><?php echo $donnees['prix'] ?> €</td>
                 </tr>
+                <?php } } ?>
             </table> 
         </div>
     </section>

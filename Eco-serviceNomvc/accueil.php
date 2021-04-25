@@ -20,17 +20,17 @@ require_once('assets/include/banniere.svg');
     <div class="container">
         <h1 class="jumbotron-heading DecouvrezNosProduits text-center" >Demarche Zero-Déchets </h1></br>
         <div class="row text-center">
-            <div class="col-5-5 card item-card">
+            <div class="col-5-5 col-sm-5 card item-card">
                 </br>
 
                 <h5>Qui sommes nous ?</h5>
                 </br></br>
                 <p>Eco-service est la société qui vous propose la vente de produits zero-dechet et la réservation de services de recyclege en entreprise depuis 20 ans</p>
             </div>
-            <div class="col-1">
+            <div class="col-lg-1">
             </div>
 
-            <div class="col-5-5 card item-card2">
+            <div class="col-5-5 col-sm-4 card item-card2">
                 </br>
                 <h5>Comment ça marche ?</h5>
                 </br></br>

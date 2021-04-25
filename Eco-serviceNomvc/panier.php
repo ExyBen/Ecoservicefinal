@@ -29,9 +29,9 @@ $total = 0;
       <div class="container">
         <div class="row mb-5"> 
           <div class="col-lg-8">
-            <div class="cart">
-              <div class="cart-wrapper">
-                <div class="cart-header text-center">
+            <div class="cart" >
+              <div class="cart-wrapper" >
+                <div class="cart-header text-center" style="border: 2px solid #668B22; border-radiux:10px;">
                   <div class="row ligne1" style="margin-bottom:10px;">
                     <div class="col-5">Produit</div>
                     <div class="col-2">Prix</div>
@@ -40,14 +40,14 @@ $total = 0;
                     <div class="col-1"></div>
                   </div>
                 </div>
-                <div class="cart-body">
+                <div class="cart-body" >
                   <!-- Product-->
                   <?php $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
 
-                  <div class="cart-item">
+                  <div class="cart-item" style="border: 1px solid #668B22; border-radiux:10px;">
                     <div class="row d-flex align-items-center text-center">
                       <div class="col-5">
-                        <div class="d-flex align-items-center"><a href="detail.html"><img  width="200px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
+                        <div class="d-flex align-items-center"><a href="detail.html"><img  width="150px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
                           <div class="cart-title text-left"><a class="text-uppercase text-dark" href="detail.html"><strong><?php echo $article['titre_article'] ?></strong></a><br>
                           </div>
                         </div>
@@ -67,7 +67,7 @@ $total = 0;
                 </div>
               </div>
             </div>
-            <div class="my-5 d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-link text-muted" href="category.html"><i class="fa fa-chevron-left"></i> Continue Shopping</a><a class="btn btn-dark" href="checkout1.html">Proceed to checkout <i class="fa fa-chevron-right"></i>                                                     </a></div>
+            <div class="my-5 d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-link text-muted" href="allProducts.php"><i class="fa fa-chevron-left"></i>Revenir à la boutique</a><a class="btn btn-success" href="finalpay.php">Proceder au paiement <i class="fa fa-chevron-right"></i>                                                     </a></div>
           </div>
           <div class="col-lg-4">
             <div class="block mb-5">
@@ -77,15 +77,15 @@ $total = 0;
               <div class="block-body bg-light pt-1">
               <a>Vous Avez <?php echo $count  ?> articles dans votre panier ! </a>
             <br/>
-            <?php echo "Total de la commande : " . $total . ' €' ?>
+            <?php echo "Prix total de la commande : " . $total . ' €' ?>
             
             <br/>
-            <a  href="finalpay.php" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a>
+            <!-- <a  href="finalpay.php" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+</section>
 <!-- Footer -->
 <?php require_once('assets/include/footer.php');?>
