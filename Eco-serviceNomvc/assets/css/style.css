@@ -52,6 +52,7 @@ html {
     background-clip: border-box;
     border: 1px solid  #668b22;
     border-radius: .25rem;
+    margin-bottom: 10px;
 }
 .buttonDevis{
     background-color: white; /* Green */
