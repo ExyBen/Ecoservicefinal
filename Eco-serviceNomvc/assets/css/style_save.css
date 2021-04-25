@@ -1,0 +1,528 @@
+/*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+html {
+   
+	height:100%;
+}
+.testici {
+    height: 00px;
+}
+.btn-action {
+    background-color:#668B22;
+    color:white;
+    margin-bottom: 5px;
+}
+.form_error{
+
+	color: red !important;
+}
+.rectangle {
+    padding-bottom: 50px;
+}
+#allArticles{
+    display:none;
+}
+#selectConnexion{
+    font-weight: bold;
+}
+.articleProducts{
+    margin-bottom: 40px;
+    margin-right:0;
+    margin-left: 0;
+    border: 2px solid #668B22;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+.card2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid  #668b22;
+    border-radius: .25rem;
+}
+.buttonDevis{
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  
+
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+.container-services{
+    background-color: #898949;
+    margin-bottom: 100px;
+}
+.no-padding{
+    padding-right: 0px !important;
+}
+#nouveautesProduits, #toutProduits{
+    font-size:25px;
+}
+#nouveautesProduits{
+    font-weight: bold;
+    margin-right:10px;
+    text-decoration: underline;
+    text-decoration-color: #668B22;
+  
+}
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.divBoxLog {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px solid #668B22;
+    border-radius: 10px;
+    height: 970px;
+}
+.divBoxLog2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px solid #668B22;
+    border-radius: 10px;
+    height: 500px;
+}
+.divBoxLog3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px solid #668B22;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.vertical {
+    border-left: 3px solid #668B22;
+    height: 50px;
+    display: inline-block;
+}
+
+.itemConnec {
+    padding-top: 15px;
+}
+
+.chooseLog {
+    padding-bottom: 10px;
+}
+
+.video-fluid {
+    width: 100%!important;
+    height: auto;
+}
+
+#head {
+    background: #181015 url(../images/bg_header.jpg) no-repeat;
+    background-size: cover;
+    min-height: 520px;
+    text-align: center;
+    padding-top: 240px;
+    color: white;
+    font-family: "Open sans", Helvetica, Arial;
+    font-weight: 300;
+}
+h5{
+    font-family: 'Rock Salt';
+
+}
+.item-card{
+    background-color:#668B22;
+
+}
+.bg-color2{
+    background-color:#898949;
+
+}
+.item-card2{
+    background-color:#898949;
+}
+#selectConnexion {
+    font-family: 'Rock Salt';
+    font-size: 15px;
+}
+.DecouvrezNosProduits{
+    font-family: 'Rock Salt';
+    font-size: 30px;
+
+}
+
+.btndelete{
+    
+        border: none;
+        background-color: transparent;
+        outline: none;
+    
+}
+.text-primary {
+    color: white !important;
+}
+.col-4-custom{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 32.333333%;
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+input[type="search"],
+.backgroundsearch {
+    float: left;
+}
+.btn2{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    /* padding: .375rem .75rem; */
+    /* font-size: 1rem; */
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.autocomplete-items{
+    position: absolute;
+    bottom: -64px;
+    left: 14px;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.input-group{
+    position: relative;
+    display: -webkit-box; 
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.form-control2{
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.col-5-5 {
+    @extend .extra-col;
+    flex: 0 0 45.833333315%;
+    max-width: 45.833333315%;
+}
+
+.col-custom {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+#selectInscription {
+    font-family: 'Rock Salt';
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.taille {
+    height: 490px;
+}
+
+.choosebox {
+    height: 70px;
+}
+
+.col-6-custom1 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    /* padding-right: 15px; */
+    padding-left: 10px;
+}
+
+.bg-dark {
+    background-color: #FFFFFF!important;
+    border-bottom: 5px solid rgba(196, 196, 196, 0.45);
+}
+
+.iconnav {
+    padding-left: 30px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: black;
+}
+
+.logSignForm {
+    padding-top: 30px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-nav {
+    padding-left: 50px;
+}
+
+.nav-item {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-toggler-icon {
+    color: red;
+}
+
+#selectConnexion {
+    font-weight: bold;
+}
+
+.paddingtop {
+    padding-top: 50px;
+}
+
+.btn-success {
+    background-color: #668b22;
+    border-color: #668b22;
+}
+
+.jumbotron {
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: .3rem;
+}
+
+.category_block li:hover {
+    background-color: #007bff;
+}
+
+.category_block li:hover a {
+    color: #ffffff;
+}
+
+.category_block li a {
+    color: #343a40;
+}
+
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+
+.reviews_product .fa-star {
+    color: gold;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+footer {
+    background: #343a40;
+    padding: 40px;
+}
+
+footer a {
+    color: #f8f9fa!important
+}
+
+.logSignForm p {
+    color: black;
+}
+
+.entete {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+
+.information {
+    border: 5px solid #668B22;
+    box-sizing: border-box;
+    margin-left: 196px;
+    margin-right: 196px;
+}
+
+.information p {
+    font-size: 30px;
+    font-family: 'Roboto';
+    line-height: 70px;
+    text-align: center;
+}
+
+.profil{
+    font-family: 'Rock Salt';
+    font-size: 30px;
+}
+.successMessage{
+    color:#668B22
+}
+
+.newMotDePasse p{
+    font-size: 30px;
+    font-family: 'Roboto';
+    line-height: 70px;
+    text-align: center;
+}
+
+.newMotDePasse input{
+    background: rgba(196, 196, 196, 0.17);
+    font-size: 30px;
+    font-family: 'Roboto';
+    border: 3px solid #668B22;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-left: 40%;
+}
+
+.newMotDePasse .submit{
+    margin-top: 3%;
+    background: #668B22;
+    border-radius: 10px;
+    width: 394px;
+    height: 82px;
+    color: white;
+}
+
+.vosCommandes {
+    margin-top: 10%;
+    border: 5px solid #668B22;
+    box-sizing: border-box;
+    margin-left: 196px;
+    margin-right: 196px;
+}
+
+.vosCommandes p {
+    font-size: 30px;
+    font-family: 'Roboto';
+    line-height: 70px;
+    text-align: center;
+}
+
+.vosCommandes tr{
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.vosCommandes .gris{
+    background-color: #C4C4C4;
+}
+
+.contact p{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    line-height: 35px;
+    margin-left: 163px;
+}
+
+.contact input{
+    height: 81px;
+    background: rgba(196, 196, 196, 0.17);
+    font-size: 30px;
+    font-family: 'Roboto';
+    border: 5px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-left: 163px;
+}
+
+.logSignForm .msg{
+    height: 100px;
+}
+
+.contact .submit{
+    margin-top: 3%;
+    background: #668B22;
+    border-radius: 20px;
+    width: 394px;
+    height: 82px;
+    color: white;
+    margin-left: 1375px;
+    border-color: white;
+}
