@@ -12,42 +12,44 @@ require_once('assets/include/header.php');
 <p class="text-center"> Ici vous pouvez faire réparer vos appareils électroniques </p>
 <form action="devis.php" method="post">
     <div class="border-art">
-        <img src="assets/images/ordinateur.jfif">
-        <p> Ordinateur : </p>
-        <input type="number" min="0" name="ordinateur">
+        <img  class="img-devis"  src="assets/images/ordinateur.jfif">
+        <p  class="img-devis"> Ordinateur : </p>
+        <input  class="img-devis" type="number" min="0" name="ordinateur">
     </div>
     <br/>
     <div class="border-art">
-        <img src="assets/images/ecran.jfif">
-        <p> Ecran : </p>
-        <input type="number" min="0" name="ecran">
+        <img  class="img-devis" src="assets/images/ecran.jfif">
+        <p  class="img-devis"> Ecran : </p>
+        <input  class="img-devis" type="number" min="0" name="ecran">
     </div>
     <br/>
     <div class="border-art">
-        <img src="assets/images/imprimante.jfif">
-        <p> Imprimante : </p>
-        <input type="number" min="0" name="imprimante">
+        <img  class="img-devis" src="assets/images/imprimante.jfif">
+        <p  class="img-devis"> Imprimante : </p>
+        <input  class="img-devis" type="number" min="0" name="imprimante">
     </div>
     <br/>
     <div class="border-art">
-        <img src="assets/images/telephone.jfif">
-        <p> Téléphone : </p>
-        <input type="number" min="0" name="telephone">
+        <img  class="img-devis" src="assets/images/telephone.jfif">
+        <p  class="img-devis"> Téléphone : </p>
+        <input  class="img-devis" type="number" min="0" name="telephone">
     </div>
     <br/>
     <div class="border-art">
-       <img src="assets/images/souris.jfif">
-        <p> Souris : </p>
-        <input type="number" min="0" name="souris">
+       <img  class="img-devis" src="assets/images/souris.jfif">
+        <p  class="img-devis"> Souris : </p>
+        <input  class="img-devis" type="number" min="0" name="souris">
     </div>
     <br/>
     <div class="border-art">
-        <img src="assets/images/clavier.jfif">
-        <p> Clavier : </p>
-        <input type="number" min="0" name="clavier">
+        <img  class="img-devis" src="assets/images/clavier.jfif">
+        <p  class="img-devis"> Clavier : </p>
+        <input  class="img-devis" type="number" min="0" name="clavier">
     </div>
     <br/>
-    <input type="submit" value="Faire le devis">
+    <input  class="img-devis" type="submit" value="Faire le devis">
 </form>
 
     
+<!-- Footer -->
+<?php require_once('assets/include/footer.php');?>
