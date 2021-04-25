@@ -22,7 +22,12 @@ if($insertion && password_verify($pass,$insertion['mdp'])){ //on regarde si ce q
     $_SESSION['email'] = $email;
     $_SESSION['statut'] = $insertion['statut'];
     $_SESSION['nom'] = $insertion['nom'];
+    $_SESSION['prenom'] = $insertion['prenom'];
     $_SESSION['adresse'] = $insertion['adresse'];
+    $_SESSION['zip'] = $insertion['zip'];
+    $_SESSION['country'] = $insertion['country'];
+    $_SESSION['telnum'] = $insertion['telnum'];
+
     
     if($insertion['siret'] != null){
         $_SESSION['siret'] = $insertion['siret'];
