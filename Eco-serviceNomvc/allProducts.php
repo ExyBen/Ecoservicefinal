@@ -48,6 +48,7 @@ require_once('assets/include/header.php');
                     } 
                     ?>
                     <img src ="assets/images/articleImg/<?php echo $donnees['img'] ?>" class="img-fluid rounded " width="90%">
+                    <p style="color: black "><?php echo $donnees['titre_article'] ; ?></p>
                     <p style="color: black"> Catégorie :  <?php echo $donnees['categoriearticle'] ; ?></p>
                     <p style="color: black"> Prix :  <?php echo $donnees['prix'] ; ?> €</p>
                     <form class="text-center" method="post" action="addPanier.php?link=allProducts">
@@ -88,6 +89,7 @@ require_once('assets/include/header.php');
                     } 
                     ?>
                     <img src ="assets/images/articleImg/<?php echo $donnees['img'] ?>" class="img-fluid rounded " width="90%">
+                    <p style="color: black "><?php echo $donnees['titre_article'] ; ?></p>
                     <p style="color: black"> Catégorie :  <?php echo $donnees['categoriearticle'] ; ?></p>
                     <p style="color: black"> Prix :  <?php echo $donnees['prix'] ; ?>€</p>
                     <form class="text-center" method="post" action="addPanier.php?link=allProducts">

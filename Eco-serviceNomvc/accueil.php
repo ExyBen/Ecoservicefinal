@@ -27,8 +27,7 @@ require_once('assets/include/banniere.svg');
                 </br></br>
                 <p>Eco-service est la société qui vous propose la vente de produits zero-dechet et la réservation de services de recyclege en entreprise depuis 20 ans</p>
             </div>
-            <div class="col-lg-1">
-            </div>
+            
 
             <div class="col-5-5 col-sm-4 card item-card2">
                 </br>
