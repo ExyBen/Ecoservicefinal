@@ -5,6 +5,8 @@ if (!isset($_SESSION))
 }
 include('assets/include/connexionbdd.php');
 require_once('assets/include/header.php'); 
+
+if(isset($_SESSION['id']) AND isset($_SESSION['email'])){ 
 $sql = "SELECT * FROM panier LEFT JOIN article ON panier.idArticle = article.id  WHERE panier.idUser = :iduser";
 
 $panier = $bdd->prepare($sql);
@@ -122,3 +124,6 @@ $total = 0;
 
 <?php require_once('assets/include/footer.php');?>
 
+<?php }else{
+    header('Location:accueil.php');
+}?>

@@ -82,7 +82,7 @@ Prenez rendez-vous dès maintenant pour bénéfier de notre sercive de recyclage
                                     <?php 
                                         } 
                                     ?>
-                                    <h4 class="card-title"><a style="color: black"href="product.html" title="View Product"><?php echo $result['titre_article'] ; ?></a></h4>
+                                    <h4 class="card-title"><a style="color: black"href ="product.php?article=<?php echo $result['id'] ?>"  title=""><?php echo $result['titre_article'] ; ?></a></h4>
                                     <p class="card-text"><?php echo $result['description'] ; ?></p>
                                     <div class="row">
                                         <div class="col">

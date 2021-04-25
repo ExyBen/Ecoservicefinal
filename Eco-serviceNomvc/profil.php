@@ -6,6 +6,7 @@ if (!isset($_SESSION))
 }
 include('assets/include/connexionbdd.php');
 require_once('assets/include/header.php'); 
+if(isset($_SESSION['id']) AND isset($_SESSION['email'])){  
 
 if(!isset($_POST['pass'])){
     $_POST['pass'] = '';
@@ -126,3 +127,6 @@ if(!isset($_POST['pass3'])){
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" type="text/javascript"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" type="text/javascript"></script>
 
+<?php }else{
+    header('Location:accueil.php');
+}?>

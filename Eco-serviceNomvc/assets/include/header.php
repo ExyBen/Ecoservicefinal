@@ -62,6 +62,7 @@
                 <div class="form-inline my-2 my-lg-0">
                     <div class="input-group input-group-sm">
                         <?php if($_SESSION['statut'] == '2'){?>
+                        <a href="gestioncommandes.php" class ="iconnav" ><img title="Ajouter un article" alt="Ajouter un article" src="assets/images/icones/admin.png" width="30px"></a> 
                         <a href="addproduct.php" class ="iconnav" ><img title="Ajouter un article" alt="Ajouter un article" src="assets/images/icones/add.png" width="30px"></a> 
                         <?php } ?>
                         <a href="deconnexion.php" class ="iconnav" ><img title="Se deconnecter" alt="Se deconnecter" src="assets/images/icones/exit.png" width="30px"></a> 
@@ -75,7 +76,6 @@
         </div>
     </nav>
     			
-        <a class="lead mb-4 ">Bonjour <?php echo $_SESSION['email']; echo $_SESSION['id'];?></a></div>
     <?php }else{ ?>
         <!DOCTYPE html>
     <html lang="en">
@@ -146,7 +146,6 @@
         </div>
     </nav>
                 
-            <a>No sesssion</a>
 
         <?php }?>
 

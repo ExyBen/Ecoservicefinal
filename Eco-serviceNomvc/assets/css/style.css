@@ -227,6 +227,9 @@ input[type="search"],
     
 
 }
+.trait{
+     border-bottom: 1px solid #668B22;
+}
 #buttonclick{
     background-color: #668B22;
 }

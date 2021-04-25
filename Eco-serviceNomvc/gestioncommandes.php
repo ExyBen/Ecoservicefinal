@@ -49,7 +49,7 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
 
                   <div class="cart-item" style="border: 1px solid #668B22; border-radiux:10px;">
                     <div class="row d-flex align-items-center text-center">
-                      <div class="col-2"><?php echo $donnees['id'] ?></div>
+                      <div class="col-2"><a href="detailcommande.php?idCommande=<?php echo $donnees['id'] ?>"><?php echo $donnees['id'] ?></a></div>
                       <div class="col-2"><?php echo $donnees['nb_articles'] ?></div>
                       <div class="col-2"><?php echo $donnees['date_commande'] ?></div>
                       <div class="col-2">
@@ -79,4 +79,6 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
       </div>
 </section>
 
-<?php } ?>
+<?php }else{
+    header('Location:accueil.php');
+} ?>
