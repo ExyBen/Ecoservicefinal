@@ -18,59 +18,74 @@ $articles = $panier->fetchall();
 $total = 0;
 ?>
 
-<h3 class="text-center">Panier</h3>
+<section class="jumbotron">
+    <div class="container">
+        <h1 class="jumbotron-heading DecouvrezNosProduits text-center" >Panier </h1></br>    
+    </div>
+</section>
 <?php if(!empty($msg)) echo "<div class='alert-success text-center'>".$msg."</div><br/>"; ?>
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <div class="col-9" >
-            <?php $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
-                <div class=" mb-5 ">
-                    <table  class="border-article">
-                        <tr>
-                            <td style="padding-left: 20px;" >
-                                <?php echo $article['titre_article'] ?>
-                            </td>
-                            <td style="float:right; padding-right:20px;">
-                                <?php echo $article['prix'] ."€" ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 20px;">
-                              <img  width="80px" src="assets/images/articleImg/<?php echo $article['img']?>">
-                            </td>
-                            <td  style="float:right; padding-right:20px;">
-                                <?php echo "x". $article['exemplaire'] ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding-left: 20px;">
-                                <?php echo "total : ". $article['exemplaire'] * $article['prix'] . "€"; ?>
-                            </td>
-                            <td  style="float:right; padding-right:20px;">
-                                <a href="delPanier.php?article=<?php echo $article['id'] ?>&exemplaire=<?php echo $article['exemplaire'] ?>">Supprimer</a>
-                            </td>
-                        </tr>
-                    </table>
-                    
-                </div>
 
-            <?php endforeach ?>
+<section>
+      <div class="container">
+        <div class="row mb-5"> 
+          <div class="col-lg-8">
+            <div class="cart">
+              <div class="cart-wrapper">
+                <div class="cart-header text-center">
+                  <div class="row ligne1" style="margin-bottom:10px;">
+                    <div class="col-5">Produit</div>
+                    <div class="col-2">Prix</div>
+                    <div class="col-2">Quantitée</div>
+                    <div class="col-2">Prix total</div>
+                    <div class="col-1"></div>
+                  </div>
+                </div>
+                <div class="cart-body">
+                  <!-- Product-->
+                  <?php $count = 0; foreach($articles as $article): $total +=   $article['exemplaire'] * $article['prix'] ; $count+= $article['exemplaire']; ?>
+
+                  <div class="cart-item">
+                    <div class="row d-flex align-items-center text-center">
+                      <div class="col-5">
+                        <div class="d-flex align-items-center"><a href="detail.html"><img  width="200px" src="assets/images/articleImg/<?php echo $article['img']?>"></a>
+                          <div class="cart-title text-left"><a class="text-uppercase text-dark" href="detail.html"><strong><?php echo $article['titre_article'] ?></strong></a><br>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2"><?php echo $article['prix'] ."€" ?></div>
+                      <div class="col-2">
+                        <div class="d-flex align-items-center">
+                            <div class="col-2"><?php echo "x". $article['exemplaire'] ?></div>
+                        </div>
+                      </div>
+                      <div class="col-2 text-center"><?php echo $article['exemplaire'] * $article['prix'] . "€"; ?></div>
+                      <div class="col-1 text-center"><a class="cart-remove" href="delPanier.php?article=<?php echo $article['id'] ?>&exemplaire=<?php echo $article['exemplaire'] ?>"> <i class="fa fa-times"></i></a></div>
+                    </div>
+                  </div>
+                  <?php endforeach ?>
+
+                </div>
+              </div>
             </div>
-            
-        </div>
-       <div class="col-3">
-            <?php echo $count . " articles" ?>
+            <div class="my-5 d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-link text-muted" href="category.html"><i class="fa fa-chevron-left"></i> Continue Shopping</a><a class="btn btn-dark" href="checkout1.html">Proceed to checkout <i class="fa fa-chevron-right"></i>                                                     </a></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="block mb-5">
+              <div class="block-header">
+                <h6 class="text-uppercase mb-0">Recapitulatif de la commande</h6>
+              </div>
+              <div class="block-body bg-light pt-1">
+              <a>Vous Avez <?php echo $count  ?> articles dans votre panier ! </a>
             <br/>
             <?php echo "Total de la commande : " . $total . ' €' ?>
             
             <br/>
-            <a  href="https://paypal.me/nathan93600" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a>
-            
-        </div> 
-    </div>
-
-</div>
-
+            <a  href="finalpay.php" > <img style='margin-top:150px; margin-bottom:150px;' src="assets\images\paypal.png" ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 <!-- Footer -->
 <?php require_once('assets/include/footer.php');?>

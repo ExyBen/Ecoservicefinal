@@ -70,7 +70,7 @@ Prenez rendez-vous dès maintenant pour bénéfier de notre sercive de recyclage
                                 <img class="card-img-top" src ="assets/images/articleImg/<?php echo $result['img'] ?>" class="img-fluid rounded " alt="Card image cap">
                                 <div class="card-body">
                                     <?php 
-                                        if ($_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
+                                        if (isset($_SESSION['statut']) AND $_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
                                     ?> 
 
                                         <!--Supprimer le commentaire-->
