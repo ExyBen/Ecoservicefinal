@@ -118,8 +118,9 @@ Prenez rendez-vous dès maintenant pour bénéfier de notre sercive de recyclage
             </div>
             <div class="col-7">
              <p>Besoin de recyclage au sein de votre entreprise ? Laissez nous faire!
-Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet.
-Prenez rendez-vous sans plus attendre!</p>
+                Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet.
+                Prenez rendez-vous sans plus attendre!
+            </p>
             <button class="btn btn-success" onclick="window.location.href='services.php'">Voir nos services</button>
             </div>
             

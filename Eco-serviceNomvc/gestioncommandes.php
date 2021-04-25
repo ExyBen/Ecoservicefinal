@@ -10,7 +10,13 @@ include('assets/include/header.php');
 
 
 if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=="2"){  ?>
+<section class="jumbotron ">
+    <div class="container">
+        <h1 class="jumbotron-heading profil text-center" >Gestion des commandes </h1>
+        <p class="text-center">Sur cette page, vous pouvez gérez les commandes de tout vos clients , Appuyez sur le N° de commande pour voir tout les détails de celle-ci ou "Valider la commande" lorsque celle-ci est livrée pour passer son statut à "Livrée" </p>
 
+    </div>
+</section>
 <section>
       <div class="container">
         <div class=" col-12"> 
@@ -29,15 +35,16 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
                 </div>
                 <div class="cart-body" >
                   <!-- Product-->
-                  <?php $req = $bdd->prepare('SELECT * FROM commande WHERE idUser = ?');
-                        $req->execute(array($_SESSION['id']));
-                        $donnees = $req->fetch();
+                  <?php $req = $bdd->prepare('SELECT * FROM commande');
+                        $req->execute();
+                        
                             // si il n'ya pas de donnee on echo pas d'article au sinon on affiche la page JUSQUA
-                            if(!$donnees){
-                                echo "Vous n'avez pas encore fait de commandes !";
-        
-                        } else {
+                            
                             while ($donnees = $req->fetch()){
+                                if(!$donnees){
+                                    echo "Vous n'avez pas encore fait de commandes !";
+            
+                            } else {
                         ?>
 
                   <div class="cart-item" style="border: 1px solid #668B22; border-radiux:10px;">
@@ -46,16 +53,15 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
                       <div class="col-2"><?php echo $donnees['nb_articles'] ?></div>
                       <div class="col-2"><?php echo $donnees['date_commande'] ?></div>
                       <div class="col-2">
-                        <div class="d-flex align-items-center">
                             <div class="col-2"><?php  if($donnees['statut']== '1'){
                                 echo "En cours"; 
                             }else{
-                                echo "Livré";
-                            } ?></div>
+                                echo "Livrée";
+                            } ?>
                         </div>
                       </div>
                       <div class="col-2 text-center"><?php echo $donnees['prix'] ?> €</div>
-                      <div class="col-1 text-center"><?php  if($donnees['statut']== '1'){?><a class="cart-remove" href="delPanier.php?article=<?php echo $article['id'] ?>&exemplaire=<?php echo $article['exemplaire'] ?>"> <i class="fas fa-check"></i></a>
+                      <div class="col-1 text-center"><?php  if($donnees['statut']== '1'){?><a class="cart-remove" href="updatecommandes_post.php?id=<?php echo $donnees['id']; ?>"> <i class="fas fa-check"></i></a>
                      <?php  }else{
 
                             } ?>

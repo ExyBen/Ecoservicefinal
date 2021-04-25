@@ -29,7 +29,7 @@ require_once('assets/include/header.php');
             <button class="buttonDevis  center-block">Demande de devis</button>
         </div>
 
-        <div class='col-5 no-padding ' >
+        <div class='col-5 no-padding imgslash' >
             <img src ="http://localhost/Eco-service/vue/img/imgservices.jpg" class=" img-fluid float-right" width='100%'height="100%">
         </div>
     </div>

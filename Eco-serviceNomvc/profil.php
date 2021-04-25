@@ -89,13 +89,13 @@ if(!isset($_POST['pass3'])){
                 </tr>
                 <?php $req = $bdd->prepare('SELECT * FROM commande WHERE idUser = ?');
                         $req->execute(array($_SESSION['id']));
-                        $donnees = $req->fetch();
                             // si il n'ya pas de donnee on echo pas d'article au sinon on affiche la page JUSQUA
-                            if(!$donnees){
-                                echo "Vous n'avez pas encore fait de commandes !";
-        
-                        } else {
+                            
                             while ($donnees = $req->fetch()){
+                                if(!$donnees){
+                                    echo "Vous n'avez pas encore fait de commandes !";
+            
+                            } else {
                         ?>
                 <tr>
                     <td><?php echo $donnees['id'] ?></td>
