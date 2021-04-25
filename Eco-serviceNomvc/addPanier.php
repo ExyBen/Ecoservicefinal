@@ -18,7 +18,7 @@
         $panier->bindParam(':exemplaire',$exemplaire);
    
     $check = $panier->execute();
-    var_dump($check);
+
     $redirection = $_GET['link'];
     if($check)
         $msg = "Votre article a bien été ajouté à votre panier !";
