@@ -423,14 +423,14 @@ footer a {
 .information {
     border: 5px solid #668B22;
     box-sizing: border-box;
-    margin-left: 196px;
-    margin-right: 196px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .information p {
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto';
-    line-height: 70px;
+    line-height: 35px;
     text-align: center;
 }
 
@@ -443,49 +443,49 @@ footer a {
 }
 
 .newMotDePasse p{
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto';
-    line-height: 70px;
+    line-height: 35px;
     text-align: center;
 }
 
 .newMotDePasse input{
     background: rgba(196, 196, 196, 0.17);
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto';
     border: 3px solid #668B22;
     box-sizing: border-box;
     border-radius: 30px;
-    margin-left: 40%;
+    margin-left: 43.5%;
 }
 
 .newMotDePasse .submit{
     margin-top: 3%;
     background: #668B22;
     border-radius: 10px;
-    width: 394px;
-    height: 82px;
+    width: 250px;
+    height: 41px;
     color: white;
 }
 
 .vosCommandes {
-    margin-top: 10%;
+    margin-top: 4%;
     border: 5px solid #668B22;
     box-sizing: border-box;
-    margin-left: 196px;
-    margin-right: 196px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .vosCommandes p {
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto';
-    line-height: 70px;
+    line-height: 35px;
     text-align: center;
 }
 
 .vosCommandes tr{
-    font-size: 30px;
-    line-height: 70px;
+    font-size: 20px;
+    line-height: 35px;
     text-align: center;
 }
 
