@@ -34,8 +34,8 @@ require_once('assets/include/header.php');
                 <a class="col-sm-4 articleProducts text-center" href ="product.php?article=<?php echo $donnees['id'] ?>">
                 <div >
                 <?php 
-                    if ($_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
-                    ?> 
+                    if (isset($_SESSION['statut']) AND$_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
+                        ?> 
 
                         <!--Supprimer le commentaire-->
                         <form action="suppproduct_post.php" method="post" class="del2">
@@ -75,7 +75,7 @@ require_once('assets/include/header.php');
                 <a class="col-sm-4 articleProducts text-center" href ="product.php?article=<?php echo $donnees['id'] ?>">
                 <div >
                 <?php 
-                    if ($_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
+                    if (isset($_SESSION['statut']) AND$_SESSION['statut'] == "2"){ //On affiche sa uniquement si le pseudo = a la session donc juste SES commentaires
                     ?> 
 
                         <!--Supprimer le commentaire-->
@@ -86,6 +86,8 @@ require_once('assets/include/header.php');
                         </form> 
                                     
                     <?php 
+                    }else{
+
                     } 
                     ?>
                     <img src ="assets/images/articleImg/<?php echo $donnees['img'] ?>" class="img-fluid rounded " width="90%">
