@@ -25,7 +25,7 @@ require_once('assets/include/banniere.svg');
 
                 <h5>Qui sommes nous ?</h5>
                 </br></br>
-                <p>Eco-service est la société qui vous propose la vente de produits zero-dechet et la réservation de services de recyclege en entreprise depuis 20 ans</p>
+                <p>Eco-service est la société qui vous propose la vente de produits zero-déchets et la réservation de services de recyclage en entreprise depuis 20 ans</p>
             </div>
             
 
@@ -117,7 +117,7 @@ Prenez rendez-vous dès maintenant pour bénéfier de notre sercive de recyclage
             </div>
             <div class="col-7">
              <p>Besoin de recyclage au sein de votre entreprise ? Laissez nous faire!
-                Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchet.
+                Eco-service débarquera sur place pour effectuer le tri et évaluer la valeur de vos produits zero déchets.
                 Prenez rendez-vous sans plus attendre!
             </p>
             <button class="btn btn-success" onclick="window.location.href='services.php'">Voir nos services</button>

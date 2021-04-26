@@ -45,6 +45,7 @@ if(isset($_SESSION['id']) AND isset($_SESSION['email']) AND $_SESSION['statut']=
                     <option value="Bouteilles">Bouteille</option>
                     <option value="Boites">Boites</option>
                     <option value="Cables">Cables</option>
+                    <option value="Eponges">Eponges</option>
                     <option value="Ordinateur">Ordinateur</option>
                 </select><br>          
                 <label>Image : </label>

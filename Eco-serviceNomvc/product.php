@@ -119,7 +119,10 @@ $req->execute(array($_GET['article']));
                 <div class="card-header bg-color2 text-white text-uppercase"><i class="fa fa-align-justify"></i> Description</div>
                 <div class="card-body">
                     <p class="card-text">
-                    <?php echo $donnees['description']; ?>
+                    <?php echo $donnees['description']; ?>  
+                    </p>
+                    <p>
+                        <b>Catégorie :</b> <?php echo $donnees['categoriearticle']; ?>
                     </p>
                 </div>
             </div>
@@ -161,12 +164,7 @@ $req->execute(array($_GET['article']));
                         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
                         <meta itemprop="datePublished" content="01-01-2016"><?php echo $donnees['date_commentaire_fr']; ?>
 
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        par <?php echo htmlspecialchars($donnees['prenom']); ?> <?php echo htmlspecialchars($donnees['nom']); ?>
+                        par <b><?php echo htmlspecialchars($donnees['prenom']); ?> <?php echo htmlspecialchars($donnees['nom']); ?></b>
                         <p class="blockquote">
                             <p class="mb-0"><?php echo nl2br(htmlspecialchars($donnees['texte'])); ?></p>
                         </p>

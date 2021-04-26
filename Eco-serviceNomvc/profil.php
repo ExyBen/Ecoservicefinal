@@ -26,7 +26,7 @@ if(!isset($_POST['pass3'])){
 </div>
 
 <?php if(isset($messageSuccesMdpChange)){?>
-        <h4 class="successMessage"><?php echo $messageSuccesMdpChange; ?></h4>
+        <h4 class=" text-center successMessage"><?php echo $messageSuccesMdpChange; ?></h4>
 <?php } ?>
 
 <section class="jumbotron ">

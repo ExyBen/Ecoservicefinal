@@ -98,7 +98,7 @@ $total = 0;
                 <div class="col-lg-12 text-center" style="background-color:white;">
                 <div class="form-group col-md-12 d-flex align-items-center">
                  <div class="col-6 col-xs-12">
-                    <input type="radio" name="livraisonmode"value="0" id="option0" checked>
+                    <input type="radio" name="livraisonmode"value="" id="option0" checked>
                     <label class="ml-6" for="option0"><strong class="d-block text-uppercase mb-2">Livraison gratuite </strong><span class="text-muted text-sm">Recevez vos produits sous 7 jours  .</span></label>
                  </div>
                  <div class="col-6 col-xs-12">
