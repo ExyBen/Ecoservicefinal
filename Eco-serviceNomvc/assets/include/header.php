@@ -28,7 +28,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="accueil.php" ><img src="http://localhost/Eco-service/vue/img/Logo.png" width="100" ></a>
+            <a class="navbar-brand" href="accueil.php" ><img src="./assets/images/Logo.png" width="100" ></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fa fa-navicon" style="color:#668B22; font-size:28px;"></i>
