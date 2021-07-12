@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 26 avr. 2021 à 10:15
+-- Généré le : lun. 12 juil. 2021 à 10:48
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 7.4.16
 
@@ -71,7 +71,8 @@ INSERT INTO `commande` (`id`, `prix`, `nb_articles`, `date_commande`, `statut`, 
 (38, '703.00', 7, '2021-04-26', 2, 12),
 (39, '133.99', 1, '2021-04-26', 2, 12),
 (40, '377.94', 7, '2021-04-26', 2, 14),
-(41, '1677.00', 13, '2021-04-26', 1, 14);
+(41, '1677.00', 13, '2021-04-26', 1, 14),
+(42, '73.96', 3, '2021-06-27', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,8 @@ CREATE TABLE `commentaire` (
 
 INSERT INTO `commentaire` (`id`, `texte`, `date_commentaire`, `idUser`, `idArticle`) VALUES
 (19, 'qdsdsq', '2021-04-25 12:27:53', 12, 3),
-(20, 'dr', '2021-04-26 00:30:27', 12, 39);
+(20, 'dr', '2021-04-26 00:30:27', 12, 39),
+(23, 'Voici mon commentaire sur l\'article', '2021-06-27 23:06:33', 9, 44);
 
 -- --------------------------------------------------------
 
@@ -117,7 +119,8 @@ INSERT INTO `detailcommande` (`idArticle`, `exemplaire`, `idCommande`) VALUES
 (39, 1, 39),
 (44, 5, 40),
 (39, 2, 40),
-(39, 13, 41);
+(39, 13, 41),
+(44, 3, 42);
 
 -- --------------------------------------------------------
 
@@ -140,7 +143,8 @@ INSERT INTO `note` (`idArticle`, `idUser`, `Nottation`) VALUES
 (3, 13, 1),
 (44, 14, 5),
 (44, 12, 1),
-(39, 14, 3);
+(39, 14, 3),
+(44, 9, 5);
 
 -- --------------------------------------------------------
 
@@ -254,13 +258,13 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT pour la table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire`
 --
 ALTER TABLE `commentaire`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pour la table `user`
